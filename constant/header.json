@@ -1,0 +1,23 @@
+{
+  "menus": [
+    {
+      "label": "Products",
+      "link": "\/c\/products"
+    }
+  ],
+  "child_menus": [
+    {
+      "label": "Interiors",
+      "link": "\/interiors"
+    }
+  ],
+  "child_sub_menus": [
+    {
+      "label": "Contact us",
+      "link": "\/page\/contact"
+    }
+  ],
+  "offer_title": "Best Selling",
+  "category_title": "Top categories",
+  "flash_sale_title": "\u0988\u09a6 \u098f \u09b8\u09be\u099c\u09c1\u0995 \u09b8\u09cd\u09ac\u09aa\u09cd\u09a8\u09c7\u09b0 \u0998\u09b0"
+}

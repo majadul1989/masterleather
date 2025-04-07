@@ -1,0 +1,54 @@
+{
+  "requests": {
+    "sum": "0"
+  },
+  "category": [
+    {
+      "id": 608,
+      "name": "Gents",
+      "seo_url": "gents",
+      "seo_h1": "",
+      "seo_h2": "",
+      "seo_h3": "",
+      "seo_h4": "",
+      "seo_h5": "",
+      "type": "category",
+      "position": 608,
+      "serial": 2,
+      "cssid": "gents",
+      "cssclass": "gents",
+      "description": "gents",
+      "parent": 1,
+      "connected_with": 76,
+      "page_image": "1090",
+      "home_image": "2918",
+      "term_menu_icon": "https:\/\/admin.masterleatherbd.com\/public\/uploads\/iconsize\/2024-03\/money-bag-1.jpg",
+      "term_menu_arrow": null,
+      "with_sub_menu": "0",
+      "sub_menu_width": null,
+      "column_count": null,
+      "timespan_id": 4,
+      "is_published": 1,
+      "in_product_home": 1,
+      "is_active": null,
+      "banner1": "https:\/\/admin.masterleatherbd.com\/public\/uploads\/iconsize\/2024-03\/money-bag-1.jpg",
+      "banner2": null,
+      "created_at": "2019-02-25T12:56:45.000000Z",
+      "updated_at": "2021-03-22T09:17:28.000000Z",
+      "home_img": {
+        "id": 2918,
+        "original_name": "500-x-660-6.jpg",
+        "filename": "500-x-660-6.jpg",
+        "file_type": "image\/jpeg",
+        "file_size": "166248",
+        "file_extension": "jpg",
+        "full_size_directory": "https:\/\/admin.masterleatherbd.comp\/public\/uploads\/fullsize\/2024-03\/money-bag-1.jpg",
+        "icon_size_directory": "https:\/\/admin.masterleatherbd.comp\/public\/uploads\/iconsize\/2024-03\/money-bag-1.jpg",
+        "status": 1,
+        "user_id": 1,
+        "created_at": "2021-03-22T09:15:03.000000Z",
+        "updated_at": "2021-03-22T09:15:03.000000Z"
+      }
+    }
+  ]
+}

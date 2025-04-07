@@ -1,0 +1,70 @@
+{
+  "request": {
+    "device": "0",
+    "type": "0"
+  },
+  "sliders": [
+    {
+      "id": 24,
+      "image_id": "65",
+      "url": "/c/products",
+      "title": null,
+      "description": null,
+      "type": 0,
+      "internal": 1,
+      "device": 0,
+      "color_code": null,
+      "text_color": null,
+      "border_bottom": null,
+      "position": 1,
+      "active": 1,
+      "created_at": "2021-06-22T03:11:13.000000Z",
+      "updated_at": "2021-10-23T04:09:38.000000Z",
+      "image": {
+        "id": 3607,
+        "original_name": "homepageslider1.jpg",
+        "filename": "homepageslider1.jpg",
+        "file_type": "image/jpeg",
+        "file_size": "622155",
+        "file_extension": "jpg",
+        "full_size_directory": "public/uploads/fullsize/2024-03/homepageslider1.jpg",
+        "icon_size_directory": "public/uploads/iconsize/2024-03/homepageslider1.jpg",
+        "status": 1,
+        "user_id": 1,
+        "created_at": "2021-06-22T03:10:41.000000Z",
+        "updated_at": "2021-06-22T03:10:41.000000Z"
+      }
+    },
+    {
+      "id": 24,
+      "image_id": "66",
+      "url": "/c/shoulder-ladies-bag",
+      "title": null,
+      "description": null,
+      "type": 0,
+      "internal": 1,
+      "device": 0,
+      "color_code": null,
+      "text_color": null,
+      "border_bottom": null,
+      "position": 1,
+      "active": 1,
+      "created_at": "2021-06-22T03:11:13.000000Z",
+      "updated_at": "2021-10-23T04:09:38.000000Z",
+      "image": {
+        "id": 3607,
+        "original_name": "homepageslider2.jpg",
+        "filename": "homepageslider2.jpg",
+        "file_type": "image/jpeg",
+        "file_size": "622155",
+        "file_extension": "jpg",
+        "full_size_directory": "public/uploads/fullsize/2024-03/homepageslider2.jpg",
+        "icon_size_directory": "public/uploads/iconsize/2024-03/homepageslider2.jpg",
+        "status": 1,
+        "user_id": 1,
+        "created_at": "2021-06-22T03:10:41.000000Z",
+        "updated_at": "2021-06-22T03:10:41.000000Z"
+      }
+    }
+  ]
+}
