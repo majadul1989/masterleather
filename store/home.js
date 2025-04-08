@@ -117,12 +117,12 @@ const mutations = {
 
 
 const actions = {
-  async fetchSliders({ commit }, info) {
-    const response = await this.$axios.$get('api/home/sliders', { params: info })
-    // this.$axios.setHeader('SELF-TOKEN','store.state.user.SELF_TOKEN')
+  // async fetchSliders({ commit }, info) {
+  //   const response = await this.$axios.$get('api/home/sliders', { params: info })
+  //   // this.$axios.setHeader('SELF-TOKEN','store.state.user.SELF_TOKEN')
 
-    return commit('setSliders', response)
-  },
+  //   return commit('setSliders', response)
+  // },
 
   async fetchFeatured({ commit }, info) {
     const response = await this.$axios.$get('api/home/sliders', { params: info })

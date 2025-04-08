@@ -83,6 +83,7 @@ export default {
     ['@nuxtjs/component-cache', {maxAge: 1000 * 84600 * 60}],
     '@nuxtjs/proxy',
     '@nuxtjs/gtm',
+    ''
   ],
   gtm: {
     scriptDefer: true,

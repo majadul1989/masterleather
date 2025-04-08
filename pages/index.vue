@@ -1,22 +1,25 @@
 <template>
   <div>
     <LazySlider :sliders="sliders"/>
-    <LazyFeature :sliders="featureSliders" v-view.once="featureSliderViewHandler"/>
-    <LazyTopCategory :category="categoryTop" v-view.once="topCategoryViewHanlder"/>
+    <NewCollection :sliders="sliders"/>
+    <PremiumCollection/>
+    <BestSeller/>
+    <!-- <LazyFeature :sliders="featureSliders" v-view.once="featureSliderViewHandler"/>
+
+
     <LazyFlashSale v-if="flashSale.flash_schedule" :products="flashSale.flash_items"
                    :flashSchedule="flashSale.flash_schedule" v-view.once="flashViewHandler"/>
     <LazyOffer :products="topOffers" v-view.once="offerViewHandler"/>
     <LazyPrebooking v-if="prebookings_info && prebookings_info.is_active" :products="prebookings"
                     :info="prebookings_info"/>
-    <!-- <LazyProductSetHome :product_sets="product_sets"/> -->
+
     <LazyGuides :products="newArrivals" v-view.once="newArrivalHandler"/>
     <LazyProductTab :GALLERY="tagGallery" v-view.once="tagGalleryHandler"/>
-    <!-- <LazyRecentProductHome/> -->
+
     <LazyCategoryProduct :posts="newsEvents" v-view.once="newsEventHandler"/>
-    <!--    <LazyCategoryBlog :posts="blogPosts" :count="blogPosts.length" v-view.once="blogPostHandler"/>-->
-<!--    <LazyService v-if="!loading" :widget="serviceWidget"/>-->
+
     <LazyBrand :loading="loading"/>
-    <Loading :loading="loading"/>
+    <Loading :loading="loading"/> -->
 
 
     <!-- Modal -->
@@ -64,6 +67,9 @@ import Service from '~/components/home/Service.vue'
 import Slider from '~/components/home/Slider.vue'
 import TopCategory from '~/components/home/TopCategory.vue'
 import Modal from '~/components/common/Modal.vue'
+import NewCollection from '~/components/home/NewCollection.vue'
+import PremiumCollection from '~/components/home/premiumCollection.vue'
+import BestSeller from '~/components/home/BestSeller.vue'
 
 export default {
 
@@ -84,7 +90,8 @@ export default {
     ProductSetHome,
     Prebooking,
     FlashSale,
-    Modal
+    Modal,
+
   },
   auth: false,
   data() {
