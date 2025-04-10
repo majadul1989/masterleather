@@ -177,18 +177,18 @@ const settings = ref({
     color: #242424;
 }
 
-ul li:nth-child(2){
+ul .preminumcollectioncard:nth-child(2){
     border-left: solid 1px #DF6D2725;
     border-right: solid 1px #DF6D2725;
 
 }
 
-ul li:nth-child(5){
+ul .preminumcollectioncard:nth-child(5){
     border-left: solid 1px #DF6D2725;
     border-right: solid 1px #DF6D2725;
 }
 
-li:nth-child(-n + 3) {
+.preminumcollectioncard:nth-child(-n + 3) {
   border-bottom: solid 1px #DF6D2725;
 }
 

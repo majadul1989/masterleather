@@ -4,6 +4,10 @@
     <NewCollection :sliders="sliders"/>
     <PremiumCollection/>
     <BestSeller/>
+    <WomenCategory/>
+    <MenCategory/>
+    <Blog/>
+    <About/>
     <!-- <LazyFeature :sliders="featureSliders" v-view.once="featureSliderViewHandler"/>
 
 
@@ -70,6 +74,10 @@ import Modal from '~/components/common/Modal.vue'
 import NewCollection from '~/components/home/NewCollection.vue'
 import PremiumCollection from '~/components/home/premiumCollection.vue'
 import BestSeller from '~/components/home/BestSeller.vue'
+import WomenCategory from '~/components/home/WomenCategory.vue'
+import MenCategory from '~/components/home/MenCategory.vue'
+import Blog from '~/components/home/Blog.vue'
+import About from '~/components/home/About.vue'
 
 export default {
 
@@ -91,6 +99,7 @@ export default {
     Prebooking,
     FlashSale,
     Modal,
+    WomenCategory,
 
   },
   auth: false,

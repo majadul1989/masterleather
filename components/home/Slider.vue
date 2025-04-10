@@ -63,6 +63,7 @@ export default {
 </script>
 
 <style>
+
 .carousel-button {
 	position: absolute;
 	left: 45%;
