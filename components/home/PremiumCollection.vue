@@ -6,24 +6,110 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 const settings = ref({
-    dots: true,
-    dotsClass: 'slick-dots slider-dot-button',
-    edgeFriction: 0.35,
-    infinite: true,
-    speed: 1000,
-    slidsToShow: 1,
-    slidesToScroll: 1,
-    focusOnSelect: true,
-    swipeToSlide: true,
-    adaptiveHeight: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    cssEase: 'linear',
-    pauseOnDotsHover: true,
-    pauseOnFocus: true,
-    pauseOnHover: true,
-
+  edgeFriction: 0.35,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  focusOnSelect: true,
+  swipeToSlide: true,
+  adaptiveHeight: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  cssEase: 'linear',
+  pauseOnDotsHover: true,
+  pauseOnFocus: true,
+  pauseOnHover: true,
+  arrows: false, // <- correct key
 });
+
+
+const premimums = ref({
+
+	id: 1,
+	categoryname: 'premiumCollection',
+	sub_categoryname:"Handbags",
+	image: 'https://via.placeholder.com/400x600?text=Front+Image',
+	slides: [
+		{
+			id: 1,
+			title: 'Stylish Summer Dress',
+			sub_title: 'Perfect for casual outings',
+			seo_url: 'stylish-summer-dress',
+			enable_variation: 'on',
+			actual_discount: 20,
+			local_discount: 20,
+			local_selling_price: 5000,
+			product_price_now: 4000,
+			first_image:'https://via.placeholder.com/400x600?text=Front+Image',
+			second_image:'https://via.placeholder.com/400x600?text=Back+Image',
+			product_set: null,
+		},
+		{
+			id: 2,
+			title: 'Stylish Summer Dress',
+			sub_title: 'Perfect for casual outings',
+			seo_url: 'stylish-summer-dress',
+			enable_variation: 'on',
+			actual_discount: 20,
+			local_discount: 20,
+			local_selling_price: 5000,
+			product_price_now: 4000,
+		first_image:'https://via.placeholder.com/400x600?text=Front+Image',
+			second_image:'https://via.placeholder.com/400x600?text=Back+Image',
+			product_set: null,
+		}
+	],
+
+	categories: [
+		{
+			id: 1,
+			categoryname: 'premiumCollection',
+			sub_categoryname:"Handbags",
+			image: 'https://via.placeholder.com/400x600?text=Front+Image',
+      icon:"fa-solid fa-bag-shopping"
+		},
+		{
+			id: 2,
+			categoryname: 'premiumCollection',
+			sub_categoryname:"Women wallet",
+			image: 'https://via.placeholder.com/400x600?text=Front+Image',
+      icon:"fa-solid fa-wallet"
+		},
+
+		{
+			id: 3,
+			categoryname: 'premiumCollection',
+			sub_categoryname:"Men wallet",
+			image: 'https://via.placeholder.com/400x600?text=Front+Image',
+      icon:"fa-solid fa-wallet"
+		},
+
+		{
+			id: 4,
+			categoryname: 'premiumCollection',
+			sub_categoryname:"Personal gift",
+			image: 'https://via.placeholder.com/400x600?text=Front+Image',
+      icon:"fa-solid fa-hand-holding-heart"
+
+		},
+		{
+			id: 5,
+			categoryname: 'premiumCollection',
+			sub_categoryname:"Corporate gift",
+			image: 'https://via.placeholder.com/400x600?text=Front+Image',
+      icon:"fa-solid fa-hands-holding-circle"
+		},
+		{
+			id: 6,
+			categoryname: 'premiumCollection',
+			sub_categoryname:"bags",
+			image: 'https://via.placeholder.com/400x600?text=Front+Image',
+      icon:"fa-solid fa-bag-shopping"
+		},
+	]
+
+})
 
 </script>
 <template>
@@ -31,13 +117,13 @@ const settings = ref({
         <div class="w-100 row">
             <div class="col-md-6 col-12 d-flex justify-content-center align-items-center py-2 flex-column">
               <ul class="row w-100 pl-4">
-                    <li class="col-4 preminumcollectioncard">
+                    <li v-for="(items,index) in premimums?.categories" :key="index"  class="col-4 preminumcollectioncard">
                         <NuxtLink to="/">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                            <span>Handbags</span>
+                            <i :class="items?.icon"></i>
+                            <span>{{ items?.sub_categoryname }}</span>
                         </NuxtLink>
                     </li>
-                    <li class="col-4 preminumcollectioncard">
+                    <!-- <li class="col-4 preminumcollectioncard">
                         <NuxtLink to="/">
                             <i class="fa-solid fa-wallet"></i>
                             <span>Women wallet</span>
@@ -69,7 +155,7 @@ const settings = ref({
                             <i class="fa-solid fa-bag-shopping"></i>
                             <span>bags</span>
                         </NuxtLink>
-                    </li>
+                    </li> -->
 
 
                 </ul>

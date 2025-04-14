@@ -135,7 +135,7 @@
                                                   <div v-for="(vari,key) in variations" :key="key" class="">
                                                       <span>{{ vari.group.title }}</span>
                                                       <div>
-                                                          <span v-for="(varix,vkey) in vari.variations" :key="vkey">
+                                                          <span v-for="(varix,vkey) in vari?.variations" :key="vkey">
                                                               {{ varix.title }}
                                                           </span>
                                                       </div>
@@ -143,7 +143,7 @@
                                               </div>
                                             </span>
                       <!-- Nipun | Product Attribute -->
-                      <div v-if="simple_info.enable_variation == 'on'">
+                      <div v-if="simple_info?.enable_variation == 'on'">
                         <!--                                            <div v-if="simple_info.variation_show_as == 'Image'" class="sizes mt-1 d-inline-block" v-for="(data, key) in simple_info.variations">-->
                         <!--  &lt;!&ndash;                                            <h6 class="text-uppercase font-weight-bold mb-2">{{data.attr_name}}</h6>&ndash;&gt;-->
                         <!--  &lt;!&ndash;                                            <label v-for="(value, index) in data.attr_value" class="radio mr-2" :key="index">&ndash;&gt;-->
@@ -436,12 +436,12 @@ export default {
       newSelectVariation: {},
       errorMsg: false,
       isLoading: false,
-      cartBtn: this.simple_info.enable_variation == 'on' ? false : true,
-      hasNewVariation: this.simple_info.variations && this.simple_info.variations.count > 0 || this.simple_info.variation_show_as != 'None' ? true : false,
-      getNewProductVariation: [this.simple_info.variations.data],
-      disable_buy: this.simple_info.disable_buy,
+      cartBtn: this.simple_info?.enable_variation == 'on' ? false : true,
+      hasNewVariation: this.simple_info?.variations && this.simple_info?.variations?.count > 0 || this.simple_info?.variation_show_as != 'None' ? true : false,
+      getNewProductVariation: [this.simple_info?.variations?.data],
+      disable_buy: this.simple_info?.disable_buy,
       fixedVariationBaseValue: false,
-      productLayerStart: this.simple_info.variation_layer_start
+      productLayerStart: this.simple_info?.variation_layer_start
     }
   },
 
@@ -451,10 +451,10 @@ export default {
       // let res = await this.$axios.get('/api/product/get-product-attribute/'+this.simple_info.id, {});
       // this.productAttrbutes = res.data;
       // console.log(single_varification_id)
-      let data = this.simple_info.variations
+      let data = this.simple_info?.variations
       // console.log(single_varification_id)
       if (single_varification_id) {
-        this.selectedVariation = data[single_varification_id].variations
+        this.selectedVariation = data[single_varification_id]?.variations
         this.selectedVariationId = single_varification_id
         this.variationPrice = {
           product_code: data[single_varification_id].variation_product_code,
@@ -580,7 +580,7 @@ export default {
 
 
         this.selectedVariationId = res.variation_id
-        this.disable_buy = res.disable_buy
+        this.disable_buy = res?.disable_buy
 
         if (option.priceHasChange == true) {
           if (res.status == '203') {
@@ -637,9 +637,9 @@ export default {
     // console.log(this.getNewProductVariation)
 
 
-    if (this.simple_info.enable_variation == 'on') {
+    if (this.simple_info?.enable_variation == 'on') {
       this.variationPrice = true
-      var getVa = this.simple_info.variations.data
+      var getVa = this.simple_info?.variations.data
       //console.log(getVa)
       for (const indexx in getVa) {
         let getv = Object.entries(getVa[indexx])

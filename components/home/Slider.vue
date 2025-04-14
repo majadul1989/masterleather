@@ -57,7 +57,7 @@ export default {
 		}
 	},
 	async created() {
-
+    console.log(this.sliders);
 	}
 }
 </script>
@@ -78,6 +78,11 @@ export default {
 
 .carousel-button a {
 	color: #fff;
+}
+
+.slick-prev::before,.slick-next::before{
+  color: white !important; /* or any color you want */
+
 }
 
 @import url('@/node_modules/vue-slick-carousel/dist/vue-slick-carousel.css');

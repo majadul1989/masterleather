@@ -20,7 +20,7 @@
                     <li v-for="(item,key) in items" :key="key" class="product-item">
 
                       <nuxt-link :to="'/product/'+item.info.seo_url" class="product-img">
-                        <lazy-image :src="item.info.image_url" alt="Chair" title="product img" class="w-100"
+                        <lazy-image :src="item.info?.image_url" alt="Chair" title="product img" class="w-100"
                                     width="70px" />
                         <!-- <img src="#" alt="" class="w-100"> -->
                       </nuxt-link>
@@ -37,7 +37,7 @@
 
                                                 </span>
                         <div v-if="item.item.variation_id" class="d-none">
-                          <div v-for="(data, ke) in item.item.variation_info.variations">
+                          <div v-for="(data, ke) in item.item.variation_info?.variations">
                             {{ ke }} :{{ data }}
                           </div>
                         </div>
@@ -69,7 +69,7 @@
                     </li>
                     <li v-for="(pset,key) in psets" :key="key" class="product-item">
                       <nuxt-link :to="'/product-set/'+pset.info.slug">
-                        <lazy-image :src="pset.info.image_url" alt="Chair" title="product img" class="w-100"
+                        <lazy-image :src="pset.info?.image_url" alt="Chair" title="product img" class="w-100"
                                     width="70px" />
                       </nuxt-link>
                       <div class="product-details">

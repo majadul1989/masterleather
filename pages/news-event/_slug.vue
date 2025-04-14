@@ -16,7 +16,7 @@
                             </span>
                             <div class="details-img">
                                 <a href="javascript:void(0)">
-                                    <lazy-image :src="post.image" class="w-100 h-100" alt=""/>
+                                    <lazy-image :src="post?.image" class="w-100 h-100" alt=""/>
                                 </a>
                             </div>
                             <h3>{{post.short_description}}</h3>

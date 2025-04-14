@@ -127,7 +127,7 @@ button:focus {
 }
 
 .bc-breadcrumb__nav {
-  border-bottom: 1px solid #dfdfdf;
+  /* border-bottom: 1px solid #dfdfdf; */
 }
 
 .bc-breadcrumb__list {

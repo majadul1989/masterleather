@@ -16,7 +16,7 @@
           <span style="font-size: 14px; color: #999">{{ item.item.sub_title }}</span>
           <span style="font-size: 14px; color: #999; font-weight: 400;">Product Code:{{ item.info.code }}</span>
           <span v-if="item.item.variation_id" class="d-none">
-                            <span style="font-weight: 400;" v-for="(data, ke) in item.item.variation_info.variations">
+                            <span style="font-weight: 400;" v-for="(data, ke) in item.item.variation_info?.variations">
                                 {{ ke }} :{{ data }}
                             </span>
                         </span>

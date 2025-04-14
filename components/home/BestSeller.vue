@@ -13,14 +13,15 @@ const settings = ref({
   slidesToScroll: 1,
   focusOnSelect: true,
   swipeToSlide: true,
-  adaptiveHeight: true,
+  adaptiveHeight: false,
   autoplay: true,
   autoplaySpeed: 5000,
   cssEase: 'linear',
   pauseOnDotsHover: true,
   pauseOnFocus: true,
   pauseOnHover: true,
-  centerMode: true,
+  centerMode: false,
+  arrows:true,
   responsive: [
     {
       breakpoint: 1024,
@@ -28,7 +29,7 @@ const settings = ref({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-       
+
       }
     },
     {
@@ -55,11 +56,11 @@ const settings = ref({
   <div class="w-100">
     <div class="w-100 d-flex justify-content-center align-items-center flex-column bestseller-header">
       <h1><span>Bestseller</span> Products</h1>
-      <nuxt-link to="/">Show all product</nuxt-link>
+      <!-- <nuxt-link to="/">Show all product</nuxt-link> -->
     </div>
 
     <div class="w-100 d-flex justify-content-center align-items-center">
-      <div class="w-75 ">
+      <div class="w-75 bestseller ">
         <VueSlickCarousel v-bind="settings">
           <div class="bestseller-card">
             <div class="bestseller-card-1">
@@ -229,7 +230,8 @@ const settings = ref({
 
 <style>
 .bestseller-header {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .bestseller-header h1 {
@@ -262,7 +264,7 @@ const settings = ref({
   justify-content: center;
   align-items: center;
   padding: 0 5px;
-  
+
 }
 .bestseller-card:hover .bestseller-card-1-cart {
   opacity: 1;
@@ -278,11 +280,11 @@ const settings = ref({
 
 .bestseller-card-1 {
   position: relative;
-  background: #f4f3f1;
+  /* background: #f4f3f1; */
 }
 .bestseller-card-1 img {
   transition: transform 0.8s ease;
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
 .bestseller-card-1:hover img {
@@ -352,6 +354,13 @@ const settings = ref({
   opacity: 0;
   transform: translateX(100%);
   pointer-events: none;
+}
+
+
+/* slider */
+.bestseller .slick-prev::before,.bestseller .slick-next::before{
+  color: #DF6D27 !important; /* or any color you want */
+
 }
 
 </style>

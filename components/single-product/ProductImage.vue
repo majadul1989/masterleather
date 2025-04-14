@@ -71,7 +71,7 @@ export default {
     })
 
 
-    let images = this.$store.state.product.IMAGES.images.map((item, index) => {
+    let images = this.$store.state.product?.IMAGES?.images.map((item, index) => {
 
       return {
         id: item.id,
@@ -79,11 +79,11 @@ export default {
       }
     })
 
-    if (this.$store.state.product.IMAGES.youtubeLink != null) {
+    if (this.$store.state.product?.IMAGES?.youtubeLink != null) {
       images.push({
         id: 'youtube',
         url: require("assets/images/video_preview.png"),
-        yt: this.$store.state.product.IMAGES.youtubeLink
+        yt: this.$store.state.product?.IMAGES.youtubeLink
       })
     }
 
@@ -128,7 +128,7 @@ export default {
       //   large_size: this.$store.state.xyz
       // }
       if (this.$store.state.SelectedvariationImage == false) {
-        if (this.$store.state.product.SIMPLE_INFO.product.enable_variation == 'on') {
+        if (this.$store.state.product.SIMPLE_INFO.product?.enable_variation == 'on') {
 
         } else {
           return this.images;

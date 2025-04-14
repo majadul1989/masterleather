@@ -29,7 +29,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                               <div class="user d-flex flex-row align-items-center">
                                 <nuxt-link :to="'/product/'+review.product.seo_url">
-                                  <lazy-image :src="review.product.image_url" alt="chair" title="chair" class="user-img rounded-circle mr-2"
+                                  <lazy-image :src="review.product?.image_url" alt="chair" title="chair" class="user-img rounded-circle mr-2"
                                               style="width: 70px !important; padding: 2px;"/>
                                 </nuxt-link>
                                 <span>

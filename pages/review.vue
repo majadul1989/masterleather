@@ -38,7 +38,7 @@
                     <tr v-for="(item,key) in items" :key="key">
                       <td class="text-center" width="5%">
                         <nuxt-link :to="'/product/'+item.info.seo_url">
-                          <lazy-image :src="item.info.image_url" alt="chair" title="Chair" class="img-thumbnail"
+                          <lazy-image :src="item.info?.image_url" alt="chair" title="Chair" class="img-thumbnail"
                                       width="70px"/>
                         </nuxt-link>
                       </td>
@@ -60,7 +60,7 @@
                           - {{ item.info.short_description }}
                         </div>
                         <div v-if="item.item.variation_info" class="d-none">
-                          <div v-if="item.item.variation_id" v-for="(data, ke) in item.item.variation_info.variations">
+                          <div v-if="item.item.variation_id" v-for="(data, ke) in item.item.variation_info?.variations">
                             <b>{{ke}} :</b>{{data}}
                           </div>
                         </div>
@@ -80,7 +80,7 @@
                     <tr v-for="(pset,key) in psets" :key="key">
                       <td class="text-center" width="">
                         <nuxt-link :to="'/product-set/'+pset.info.slug">
-                          <lazy-image :src="pset.info.image_url" alt="Chair" title="product img" class="img-thumbnail"
+                          <lazy-image :src="pset.info?.image_url" alt="Chair" title="product img" class="img-thumbnail"
                                       style="max-width:150px;"/>
                         </nuxt-link>
                       </td>

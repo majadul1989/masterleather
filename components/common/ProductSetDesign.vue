@@ -14,10 +14,10 @@
     <nuxt-link :to="'/product-set/'+product.slug">
       <div class="product-item-img">
         <lazy-image
-          :src="product.image?product.image.full_size_directory:'public/uploads/fullsize/2019-01/default.jpg'"
+          :src="product?.image?product?.image.full_size_directory:'public/uploads/fullsize/2019-01/default.jpg'"
           class="hide-img w-100" alt=""/>
         <lazy-image
-          :src="product.image?product.image.full_size_directory:'public/uploads/fullsize/2019-01/default.jpg'"
+          :src="product?.image?product?.image.full_size_directory:'public/uploads/fullsize/2019-01/default.jpg'"
           class="show-img w-100" alt=""/>
       </div>
 

@@ -165,7 +165,7 @@ const items = ref([
         <!-- small menu bar -->
         <div class="w-full bg-white d-flex align-items-center justify-content-center py-1 position-relative">
 
-            <ul class="w-full mega_menu_parent row py-4">
+            <ul class="w-full mega_menu_parent row py-1">
                 <li v-for="(item, index) in items" :key="index"><NuxtLink to="#">{{ item.name }} <span v-if="item.childs.length > 0"><i class="fa-solid fa-angle-down"></i></span></NuxtLink>
                     <ul class="w-full mega_menu_child container py-4" v-if="item.childs.length > 0">
                         <li v-for="(child, ind) in item.childs" :key="ind">

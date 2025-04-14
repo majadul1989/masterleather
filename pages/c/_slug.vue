@@ -1,14 +1,11 @@
 <template>
   <div>
     <LazyBreadcrumb :pathList="pathList" />
-    <LazyAllView v-if="sub_category.length > 0" :sub_category="sub_category" :main_category="category" />
-    <!-- <LazyBannerView :product_sets="product_sets"/> -->
+    <!-- <LazyAllView v-if="sub_category.length > 0" :sub_category="sub_category" :main_category="category" />
     <LazyModularView v-if="sub_category.length > 0" :products="recommended_products" :main_category="category" />
-    <LazyGridView v-if="sub_category.length > 0" />
+    <LazyGridView v-if="sub_category.length > 0" /> -->
     <LazyProductView :category="category" :sub_category="sub_category" />
-    <!--    <LazyCategoryDescription v-if="!loading && category" :main_category="category"/>-->
     <loading :loading="loading" />
-    <!--    <script v-html="JSON.stringify(schema)" type="application/ld+json"></script>-->
   </div>
 </template>
 

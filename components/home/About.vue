@@ -1,7 +1,7 @@
 <template>
     <div class="w-100 row mt-4">
-        <div class="col-md-6 col-12 about">
-            <img src="@/assets/images/home/about-1.jpeg" alt="Image 1" class="img-fluid" />
+        <div class="col-md-6 col-12 about pr-4">
+            <img src="@/assets/images/home/about-1.jpeg" alt="Image 1" class="cover img-r" />
             <div class="about-item">
                 <div class="about-item-1">
                     <span>Curious About</span>
@@ -10,8 +10,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-12 about">
-            <img src="@/assets/images/home/new1.jpeg" alt="Image 1" class="img-fluid" />
+        <div class="col-md-6 col-12 about pr-2">
+            <img src="@/assets/images/home/new1.jpeg" alt="Image 1" class="cover img-l" />
             <div class="about-item">
                 <div class="about-item-1">
                     <span>Curious About</span>
@@ -29,6 +29,20 @@
 .about{
     position: relative;
     margin-top: 5rem;
+}
+.about .cover{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+
+
+}
+
+.img-r{
+  padding-right: 0px;
+}
+.img-l{
+  padding-right: 0px;
 }
 
 .about-item{
@@ -76,4 +90,13 @@
     color: black;
 }
 
+
+@media screen and (min-width: 700px) {
+  .img-r{
+  padding-right: 4px;
+}
+.img-l{
+  padding-right: 4px;
+}
+}
 </style>

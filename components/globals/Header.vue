@@ -8,6 +8,7 @@
     <!-- Visible only on small (xs) screens -->
     <div class="d-block d-md-none">
       <mobaile-navbar/>
+
     </div>
   </div>
 </template>

@@ -16,7 +16,7 @@
                             </span>
                             <div class="details-img">
                                 <a href="javascript:void(0)">
-                                    <lazy-image :src="post.image" class="img-fluid xw-100 xh-100" alt=""/>
+                                    <lazy-image :src="post?.image" class="img-fluid xw-100 xh-100" alt=""/>
                                 </a>
                             </div>
                             <h3>{{post.short_description}}</h3>
@@ -110,7 +110,7 @@ export default {
         metatitle: seoSetting.meta_title ?? simple_info.title + ` | Master Leather BD`,
         metadescription: seoSetting.meta_description,
         metakeywords: seoSetting.meta_keywords,
-        ogImage : simple_info.images,
+        ogImage : simple_info?.images,
       };
     },
 
